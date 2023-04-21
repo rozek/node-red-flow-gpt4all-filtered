@@ -28,7 +28,7 @@ npm install gpt4all
 
 ### Preparing the Model ###
 
-Download the model from the [location given in the docs](https://the-eye.eu/public/AI/models/nomic-ai/gpt4all/gpt4all-lora-quantized.bin) for GPT4All and move it into the folder `.nomic` your created before.
+Download the model from the [location given in the docs](https://the-eye.eu/public/AI/models/nomic-ai/gpt4all/gpt4all-lora-quantized.bin) for GPT4All and move it into the folder `.nomic` you created before.
 
 ### Importing the Function Node ###
 

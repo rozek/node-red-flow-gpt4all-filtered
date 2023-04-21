@@ -54,7 +54,7 @@ The file [GPT4All-filtered.html](./GPT4All-filtered.html) contains a trivial web
 
 Ideally, this page should be served from the same Node-RED server that also accepts the HTTP requests for GPT4All, but this is not strictly necessary.
 
-The input fields `Base URL`, `User Name` and `Password` can be used if web server and Node-RED server are at different locations: just enter the base URL of your Node-RED HTTP endpoint (without the trailing `alpaca`) and, if that server requires basic authentication, your user name and your password in the related input fields before you send your first prompt - otherwise, just leave all these fields empty.
+The input fields `Base URL`, `User Name` and `Password` can be used if web server and Node-RED server are at different locations: just enter the base URL of your Node-RED HTTP endpoint (without the trailing `gpt4all`) and, if that server requires basic authentication, your user name and your password in the related input fields before you send your first prompt - otherwise, just leave all these fields empty.
 
 The largest field will show a transcript of your current dialog with the inference node.
 

@@ -4,7 +4,7 @@ Node-RED Flow (and web page example) for the filtered GPT4All AI model
 
 This repository contains a function node for [Node-RED](https://nodered.org/) which can be used to run the [GPT4All model](https://github.com/nomic-ai/gpt4all) in its "filtered" form using the [official Typescript binding](https://github.com/nomic-ai/gpt4all-ts) within a Node-RED flow. **Inference is done on the CPU** (without requiring any special hardware) and still completes within a few seconds on a reasonably powerful computer.
 
-![GPT4All HTTP Flow](./GPT4All-HTTP-Flow.png)
+![GPT4All HTTP Flow](./GPT4All-filtered-HTTP-Flow.png)
 
 Having the actual inference as a self-contained function node gives you the possibility to create your own user interface or even use it as part of an autonomous agent.
 
@@ -32,7 +32,7 @@ Download the model from the [location given in the docs](https://the-eye.eu/publ
 
 ### Importing the Function Node ###
 
-Finally, open the Flow Editor of your Node-RED server and import the contents of [GPT4All-Function.json](./GPT4All-Function.json). After deploying your changes, you are ready to run GPT4All inferences directly from within Node-RED.
+Finally, open the Flow Editor of your Node-RED server and import the contents of [GPT4All-filtered-Function.json](./GPT4All-filtered-Function.json). After deploying your changes, you are ready to run GPT4All inferences directly from within Node-RED.
 
 ## Usage ##
 
@@ -40,17 +40,17 @@ The prompt has to be passed as properties of the msg object, other parameters ar
 
 ## Example ##
 
-The file [GPT4All-HTTP-Endpoint.json](./GPT4All-HTTP-Endpoint.json) contains an example which uses the GPT4All function node to answer HTTP requests. The prompt has to be passed as a query parameter, the result of the inference will then be returned in the body of the HTTP response.
+The file [GPT4All-filtered-HTTP-Endpoint.json](./GPT4All-filtered-HTTP-Endpoint.json) contains an example which uses the GPT4All function node to answer HTTP requests. The prompt has to be passed as a query parameter, the result of the inference will then be returned in the body of the HTTP response.
 
-> Nota bene: the screenshot from above shows a modified version of this flow including an authentication node from the author's [Node-RED Authorization Examples](https://github.com/rozek/node-red-authorization-examples), the flow in [GPT4All-HTTP-Endpoint.json](./GPT4All-HTTP-Endpoint.json) comes without any authentication.
+> Nota bene: the screenshot from above shows a modified version of this flow including an authentication node from the author's [Node-RED Authorization Examples](https://github.com/rozek/node-red-authorization-examples), the flow in [GPT4All-filtered-HTTP-Endpoint.json](./GPT4All-filtered-HTTP-Endpoint.json) comes without any authentication.
 
-In order to install this flow, simply open the Flow Editor of your Node-RED server and import the contents of [GPT4All-HTTP-Endpoint.json](./GPT4All-HTTP-Endpoint.json)
+In order to install this flow, simply open the Flow Editor of your Node-RED server and import the contents of [GPT4All-filtered-HTTP-Endpoint.json](./GPT4All-filtered-HTTP-Endpoint.json)
 
 ### Web Page ###
 
-The file [GPT4All.html](./GPT4All.html) contains a trivial web page which can act as a user interface for the HTTP endpoint.
+The file [GPT4All-filtered.html](./GPT4All-filtered.html) contains a trivial web page which can act as a user interface for the HTTP endpoint.
 
-![GPT4All Screenshot](./GPT4All-Screenshot.png)
+![GPT4All Screenshot](./GPT4All-filtered-Screenshot.png)
 
 Ideally, this page should be served from the same Node-RED server that also accepts the HTTP requests for GPT4All, but this is not strictly necessary.
 
